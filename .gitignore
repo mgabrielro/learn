@@ -1,0 +1,18 @@
+# Project specifics
+###################
+www/config/autoload/local.inc.php
+www/logs/
+
+# Ignore vendor .git folders
+############################
+www/vendor
+
+# IDE specifics
+###############
+*.iml
+*.swp
+
+# Vagrant
+###############
+.vagrant
+vagrant_dumps

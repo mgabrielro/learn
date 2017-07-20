@@ -1,0 +1,19 @@
+{
+  "name": "learn",
+  "description": "learn project",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "require": {
+    "zendframework/zendframework": "2.5.3",
+    "zendframework/zend-developer-tools": "1.1.1",
+    "guzzlehttp/guzzle": "~6.0",
+    "monolog/monolog": "^1.17",
+    "predis/predis": "v1.1.1",
+    "nesbot/carbon": "^1.22"
+  },
+  "require-dev": {
+    "zendframework/zftool": "dev-master"
+  }
+}
+
