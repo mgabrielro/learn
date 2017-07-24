@@ -35,7 +35,7 @@
 
                     var $element = $(element);
 
-                    if($element.val() != '') {
+                    if($element.val() !== '') {
                         $element.trigger('autofill');
                     }
 
@@ -61,7 +61,7 @@
         get_profession_mapping: function(profession) {
 
             if (profession in profession_mapping) {
-                return profession_mapping[profession]
+                return profession_mapping[profession];
             } else {
                 return undefined;
             }
@@ -95,7 +95,7 @@
                 var yyyy = parseInt(parms[1], 10);
                 var mm = parseInt(parms[2], 10);
                 var dd = parseInt(parms[3], 10);
-            } else if(parms =date.match(de_date_regex)) {
+            } else if(parms = date.match(de_date_regex)) {
                 var yyyy = parseInt(parms[3], 10);
                 var mm = parseInt(parms[2], 10);
                 var dd = parseInt(parms[1], 10);

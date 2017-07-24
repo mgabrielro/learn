@@ -1,7 +1,4 @@
-<link rel="stylesheet/less" type="text/css" href="/public/assets/less/main.less" />
-
-
-<h1><?= 'Learn Project'; ?></h1>
+<div class="learn-headline"><?= 'Learn Project'; ?></div>
 
 <?php
 $domain = 'learn-project.com';

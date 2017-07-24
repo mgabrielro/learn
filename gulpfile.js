@@ -199,10 +199,6 @@ gulp.task('generate', groupedTasks, function () {
                     var sources = definitions[compileGroups[compileGroup]][compileTask].src;
                     var taskKey = definitions[compileGroups[compileGroup]].group_key;
 
-                    if (taskKey === 'LESS') {
-                        sources = definitions[compileGroups[compileGroup]][compileTask].lib;
-                    }
-
                     util.log('Starting ' + util.colors.cyan('"watch"') + ' on ' + util.colors.magenta.bold(taskKey + '-' + compileTask) + ' sources');
                     gulp.watch(sources, [taskKey + '-' + compileTask]);
 
