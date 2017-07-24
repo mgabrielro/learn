@@ -3,13 +3,13 @@
     "group_key": "LESS",
     "DESKTOP": {
       "src": [
-        "./html/public/assets/desktop/less/main.less"
+        "./public/assets/desktop/less/main.less"
       ],
       "lib": [
-        "./html/public/assets/desktop/less/**/*.less"
+        "./public/assets/desktop/less/**/*.less"
       ],
       "target": {
-        "path": "./html/public/assets/desktop/dist/css",
+        "path": "./public/assets/desktop/dist/css",
         "name": "main.css"
       }
     }
@@ -19,22 +19,22 @@
     "libsJS": {
       "src": [
         "./bower_components/jquery/dist/jquery.min.js",
-        "./html/public/assets/desktop/js/namespace.js",
-        "./html/public/assets/desktop/js/libs/*.js"
+        "./public/assets/desktop/js/namespace.js",
+        "./public/assets/desktop/js/libs/*.js"
       ],
       "target": {
-        "path": "./html/public/assets/desktop/dist/js",
+        "path": "./public/assets/desktop/dist/js",
         "name": "libs.js"
       }
     },
     "appJS": {
       "src": [
-        "./html/public/assets/desktop/js/domElements/*.js",
-        "./html/public/assets/desktop/js/formElements/*.js",
-        "./html/public/assets/desktop/js/*.js"
+        "./public/assets/desktop/js/domElements/*.js",
+        "./public/assets/desktop/js/formElements/*.js",
+        "./public/assets/desktop/js/*.js"
       ],
       "target": {
-        "path": "./html/public/assets/desktop/dist/js",
+        "path": "./public/assets/desktop/dist/js",
         "name": "app.js"
       }
     }
