@@ -1,0 +1,50 @@
+.compare-header-grade {
+  @border-color: @border-color-primary;
+  @column-background-color: #f7f7f7;
+  @column-gray-background-color: @third-view-tariff-details-tab-border-color;
+  @column-content-background-color: #fff;
+  @row-border: 1px solid @border-color;
+
+  border: @row-border;
+
+  &__row {
+    .display-flex();
+
+    height: auto;
+    border-bottom-width: 0;
+  }
+
+  &__column {
+    .flex(1);
+
+    background-color: @column-background-color;
+    border-right: @row-border;
+    padding: 10px;
+    vertical-align: bottom;
+
+    &--content {
+      background-color: @column-content-background-color;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    &:last-of-type {
+      border-right: 0;
+    }
+
+    &--vertically-centered {
+      .display-flex();
+      .flex-direction-column();
+      .flex-justify-content(center);
+    }
+  }
+
+  &__grade {
+    margin: 6.5px auto;
+    display: inline-block;
+  }
+
+  &__label-tariff-grade {
+    .font-size(14px);
+  }
+}

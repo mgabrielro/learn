@@ -1,0 +1,136 @@
+.pension-overlay {
+    @background: @white;
+    @svg-fill: @c24-color-light-grey;
+    @svg-hover-fill: @c24-color-dark-blue;
+    @headline-color: @c24-color-dark-blue;
+    @input-border: @c24-color-light-grey;
+    @input-empty-background: @c24-color-background-helper;
+    @input-grey-border-empty-background: @c24-color-background-helper;
+    @input-grey-border-empty-border: @c24-color-light-grey;
+    @input-grey-border: @c24-color-light-grey;
+    @input-border-hover: @c24-color-nobel-grey;
+    @tipp-text: @c24-color-dark-blue;
+    @tipp-background: #90EE90;
+    @triangel-border-left: #90EE90;
+
+    .font-size(15px);
+
+    padding: 20px 30px;
+    width: 670px;
+    margin: 10% auto;
+    background: @background;
+
+    &__svg {
+        fill: @svg-fill;
+        width: 15px;
+        height: 15px;
+
+        &:hover {
+            fill: @svg-hover-fill;
+        }
+    }
+
+    &__headline {
+        .font-size(20px);
+
+        line-height: 28px;
+        color: @headline-color;
+        margin-bottom: 30px;
+    }
+
+    &__content {
+        .display-flex();
+        .flex-direction-column();
+    }
+
+    &__row {
+        .display-flex();
+
+        margin-bottom: 20px;
+
+        &--pull-right {
+            .flex-justify-content(flex-end);
+        }
+    }
+
+    &__label {
+        .flex-justify-content(flex-start);
+
+        width: 280px;
+    }
+
+    &__input {
+        .font-size(13px);
+
+        line-height: 20px;
+        width: 380px;
+        border: 0;
+        padding-top: 2px;
+
+        &:hover {
+            border-color: @input-border-hover;
+        }
+
+        &--flexbox {
+            .display-flex();
+        }
+
+        &--grey-border-empty {
+            .display-flex();
+
+            border: 1px solid @input-grey-border-empty-border;
+            height: 36px;
+            padding-left: 10px;
+            background: @input-grey-border-empty-background;
+        }
+
+        &--grey-border {
+            border: 1px solid @input-grey-border;
+            height: 36px;
+            padding-left: 10px;
+        }
+
+        &--empty {
+            background: @input-empty-background;
+        }
+    }
+
+    &__currency {
+        .flex-justify-content(flex-end);
+
+        padding: 10px 10px 10px 0;
+        height: 19px;
+    }
+
+    &__info-text {
+        .display-flex();
+    }
+
+    &__tipp {
+        .display-flex();
+
+        background: @tipp-background;
+        float: left;
+        height: 30px;
+        padding: 20px 10px 10px;
+        color: @tipp-text;
+        font-weight: bold;
+    }
+
+    &__triangle {
+        .display-flex();
+
+        width: 0;
+        height: 0;
+        margin: 15px 0 10px;
+        border-left: 15px solid @triangel-border-left;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+
+    &__info {
+        padding: 22px 0 0 30px;
+    }
+}
+
+  

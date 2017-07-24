@@ -1,0 +1,129 @@
+.faq {
+  @container-background-color: @white;
+  @header-headline-color: @grey-darker;
+  @footer-advice-color: @grey-darker;
+  @contact-phone-number-color: @brand-primary;
+  @all-questions-background-color: #fafafa;
+  @all-questions-border-color: @border-color-primary;
+  @all-questions-hover-border-color: @c24-color-grey;
+  @background: linear-gradient(#9699AF, #F0F0F2, #9699AF);
+
+  padding: 10px;
+  background: @background;
+  min-width: 0;
+  height: auto;
+
+  &__container {
+    background-color: @container-background-color;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+  &__header-headline {
+    .font-size(15px);
+
+    color: @header-headline-color;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__header-logo {
+    width: 220px;
+    height: 60px;
+  }
+
+  &__footer-advice {
+    .font-size(12px);
+
+    margin: 15px 0 6px;
+    color: @footer-advice-color;
+  }
+
+  &__contact-phone-time {
+    .font-size(11px);
+
+    line-height: 11px;
+  }
+
+  &__contact-phone-number {
+    .font-size(14px);
+
+    color: @contact-phone-number-color;
+  }
+
+  &__contact-phone {
+    .display-flex();
+  }
+
+  &__phone-icon {
+    width: 15px;
+    height: 18px;
+    margin-right: 1px;
+  }
+
+  &__contact-phone-data {
+    .flex(1);
+
+    padding: 0 10px;
+  }
+
+  &__contact-header {
+    .font-size(18px);
+
+    margin: 10px 0 25px;
+  }
+
+  &__contact-email {
+    .display-flex();
+  }
+
+  &__contact-email-address {
+    .flex(1);
+
+    padding-left: 10px;
+  }
+
+  &__email-icon {
+    width: 17px;
+    height: 20px;
+  }
+
+  &__list {
+    list-style: disc;
+    margin: 10px 16px;
+  }
+
+  &__link-more-information {
+    display: block;
+    text-align: right;
+  }
+
+  &__all-questions {
+    background-color: @all-questions-background-color;
+    border: 1px solid @all-questions-border-color;
+    margin-bottom: 5px;
+
+    &:hover {
+      border-color: @all-questions-hover-border-color;
+    }
+  }
+
+  &__all-questions-link {
+    .font-size(14px);
+    .display-flex();
+    .flex-align-items(center);
+
+    height: 45px;
+    padding: 0 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__all-questions-plus {
+    .font-size(20px);
+
+    padding-right: 8px;
+  }
+}

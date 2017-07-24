@@ -1,0 +1,30 @@
+// No BEM style because plugin enforcement
+.angucomplete {
+  &-dropdown {
+    background-color: #fff;
+    border: 1px solid @border-color-primary;
+    border-top: none;
+
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &-row {
+    padding: 5px;
+
+    .highlight {
+      font-weight: bold;
+    }
+  }
+
+  &-selected-row {
+    background-color: @brand-primary;
+    color: #f4f4f4;
+    cursor: pointer;
+  }
+}

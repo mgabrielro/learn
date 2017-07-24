@@ -1,0 +1,83 @@
+.tariff-core-feature-boxes {
+  @box-border-color: #b4b4b4;
+  @box-active-border-color: #7ab51d;
+  @text-color: #666;
+  @icon-excess-color: #b4b4b4;
+  @icon-excess-active-color: #7ab51d;
+  @icon-color: #b4b4b4;
+  @icon-active-color: #7ab51d;
+  @icon-zzv-fill: #b4b4b4;
+  @icon-zzv-active-fill: #7ab51d;
+
+  overflow: hidden;
+  margin-bottom: 8px;
+
+  &__box {
+    width: 55px;
+    height: 30px;
+    border: 2px solid @box-border-color;
+    border-radius: 2px;
+    padding: 2px;
+    margin-right: 5px;
+    float: left;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      border-color: @box-active-border-color;
+    }
+  }
+
+  &__icon-container {
+    height: 15px;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  &__icon-excess {
+    .font-size(15px);
+
+    color: @icon-excess-color;
+    font-weight: bold;
+  }
+
+  &__box--active &__icon-excess {
+    color: @icon-excess-active-color;
+  }
+
+  &__icon {
+    .font-size(14px);
+
+    color: @icon-color;
+  }
+
+  &__box--active &__icon {
+    color: @icon-active-color;
+  }
+
+  &__icon-zzv {
+    fill: @icon-zzv-fill;
+    height: 15px;
+    width: 100%;
+  }
+
+  &__box--active &__icon-zzv {
+    fill: @icon-zzv-active-fill;
+  }
+
+  &__text {
+    .font-size(11px);
+
+    color: @text-color;
+    text-align: center;
+    line-height: 1;
+
+    &--small-text {
+      .font-size(7px);
+
+      margin-top: 6px;
+    }
+  }
+}

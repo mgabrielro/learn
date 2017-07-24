@@ -1,0 +1,39 @@
+.tariff-details-legend {
+  @item-color: @grey-darker;
+  @item-box-very-good-background-color: #77B61B;
+  @item-box-good-background-color: #F3BD00;
+  @item-box-average-background-color: #CECECE;
+
+  .display-flex();
+  .flex-justify-content(center);
+
+  padding-top: 20px;
+  padding-bottom: 16px;
+
+  &__item {
+    .font-size(9px);
+
+    color: @item-color;
+    display: inherit;
+    margin-right: 20px;
+    line-height: 14px;
+  }
+
+  &__item-box {
+    width: 30px;
+    height: 15px;
+    margin-right: 5px;
+
+    &--very-good {
+      background-color: @item-box-very-good-background-color;
+    }
+
+    &--good {
+      background-color: @item-box-good-background-color;
+    }
+
+    &--average {
+      background-color: @item-box-average-background-color;
+    }
+  }
+}

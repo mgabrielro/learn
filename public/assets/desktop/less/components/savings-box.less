@@ -1,0 +1,257 @@
+@savings-box-row-border-color: @c24-color-light-grey;
+@savings-box-label-highlight-color: @brand-secondary;
+@savings-box-saving-color: @brand-secondary;
+@savings-box-input-error-border-color: #c82d2d;
+@savings-box-input-error-message-color: #c82d2d;
+
+.savings-box {
+  &__row {
+    .display-flex();
+
+    border-bottom: 1px solid @savings-box-row-border-color;
+    padding-bottom: 20px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    &--border-top {
+      border-top: 1px solid @savings-box-row-border-color;
+    }
+
+    &--no-border-bottom {
+      border-bottom: none;
+    }
+
+    &--spacing-top {
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+
+    &--no-margin-top {
+      margin-top: 0;
+    }
+
+    &--no-spacing-bottom {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &--reduced-margin {
+      margin-top: 2px;
+    }
+  }
+
+  &__col {
+    width: 320px;
+
+    &--flex {
+      .flex(1);
+    }
+  }
+
+  &__label-container {
+    padding: 10px 15px 0 0;
+
+    &--no-padding {
+      padding: 0;
+    }
+  }
+
+  &__label {
+    .font-size(12px);
+
+    font-weight: bold;
+    line-height: 20px;
+    padding: 1px 0 0;
+
+    &--saving {
+      .font-size(17px);
+
+      color: @savings-box-label-highlight-color;
+      height: 40px;
+      line-height: 32px;
+      font-weight: normal;
+    }
+  }
+
+  &__input-and-tooltip-container {
+    .display-flex();
+
+    margin-bottom: 20px;
+  }
+
+  &__input-container {
+    width: 320px;
+    position: relative;
+  }
+
+  &__tooltip-container {
+    width: 68px;
+    height: 40px;
+    position: relative;
+  }
+
+  &__input {
+    .form-input-text-base-style();
+  }
+
+  &__input-container--error &__input,
+  &__input-container--error &__input:hover {
+    border-color: @savings-box-input-error-border-color;
+  }
+
+  &__input-error-messages {
+    .font-size(11px);
+
+    color: @savings-box-input-error-message-color;
+    padding-top: 5px;
+    display: none;
+  }
+
+  &__input-container--error &__input-error-messages {
+    display: block;
+  }
+
+  &__input-error-message {
+    display: block;
+  }
+
+  &__input-unit {
+    .font-size(13px);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    line-height: 20px;
+  }
+
+  &__info {
+    .font-size(11px);
+
+    margin-bottom: 20px;
+  }
+
+  &__button-container {
+    width: 320px;
+  }
+
+  &__button-spinner {
+    .fa-icon();
+
+    &:before {
+      content: '\f110';
+    }
+  }
+
+  &__headline {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__logo-container {
+    .display-flex();
+
+    justify-content: center;
+    align-items: center;
+
+    max-height: 67px;
+    height: 100%;
+    margin: 15px 0 10px;
+  }
+
+  &__logo {
+    .flex(1 1 0);
+  }
+
+  &__logo-img {
+    max-height: 50px;
+    max-width: 140px;
+    display: block;
+    margin: auto;
+    object-fit: scale-down;
+  }
+
+  &__monthly-premium,
+  &__premium-rate {
+    .font-size(12px);
+
+    text-align: center;
+    padding: 10px 0 0;
+  }
+
+  &__saving {
+    .box-sizing(border-box);
+    .font-size(17px);
+
+    text-align: center;
+    color: @savings-box-saving-color;
+    height: 40px;
+    padding-top: 18px;
+  }
+
+  &__tooltip-icon {
+    .font-size(16px);
+  }
+
+  &__hint {
+    .display-flex();
+    .flex-align-items(center);
+  }
+
+  &__hint-icon-container {
+    .flex(1 0 0);
+
+    text-align: center;
+    width: 100%;
+    max-width: 50px;
+  }
+
+  &__hint-icon {
+    .fa-icon();
+
+    &:before {
+      .font-size(17px);
+
+      content: '\f06a';
+      color: @savings-box-saving-color;
+    }
+  }
+
+  &__hint-content-container {
+    .flex(1 1 0);
+
+    padding-right: 75px;
+  }
+
+  &__hint-content-headline {
+    .font-size(14px);
+
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  &__hint-content {
+    .font-size(12px);
+
+    line-height: 20px;
+  }
+
+  &__saving-row,
+  &__hint-row {
+    .transition(max-height .5s ease-in-out);
+
+    max-height: 999px;
+
+    &--hidden {
+      .transition(max-height .5s cubic-bezier(0, 1, 0, 1));
+
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &--hidden-remove {
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.overview-list {
+  @item-odd-color: #f4f4f4;
+  @feature-icon-fill: @brand-primary;
+
+  &__item {
+    padding: 10px 0;
+
+    &:nth-child(odd) {
+      background-color: @item-odd-color;
+    }
+  }
+
+  &__feature-icon {
+    fill: @feature-icon-fill;
+    width: 28px;
+    height: 28px;
+    margin: 2px 12px 2px 7px;
+    vertical-align: middle;
+  }
+
+  &__bullet-list {
+    vertical-align: middle;
+    display: inline-block;
+    width: 90%;
+    list-style: outside;
+    padding-left: 10px;
+  }
+}

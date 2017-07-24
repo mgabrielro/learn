@@ -1,0 +1,627 @@
+#comparison {
+    margin: 0;
+    border-top: 0;
+    border-top: 1px solid #dcdcdc;;
+}
+
+#comparison .tertiary {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px;
+    border-color: #005ea8;
+    cursor: pointer;
+    height: 30px/38px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/** each section displayed as table **/
+#comparison section {
+    display: table;
+    width: 100%;
+}
+
+/** section header with headline and toggle button **/
+#comparison section > header {
+    display: table-caption;
+    background-color: #fff;
+    border: 0 solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0;
+}
+
+/** style for the toggle button in the section header **/
+#comparison section header .switch {
+    height: 6px;
+    margin: 5px;
+    width: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    background: url("/assets/desktop/images/png/sprites/blue_arrows_sprite_big.png") no-repeat;
+    background-size: 25px;
+}
+
+#comparison > section:first-of-type > article:nth-child(2) > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#comparison a.prevResult {
+    margin-right: 10px;
+}
+
+#comparison header {
+    background: #fff;
+}
+
+#comparison section.ribbons {
+
+    > article > div{
+        height: 0;
+    }
+
+}
+
+#comparison > section > article:first-child > div {
+    border-top: none;
+}
+
+
+
+/** tariff numeric price in tarif info cell **/
+#comparison section > article > div div.logo {
+    text-align: left;
+}
+
+
+
+#comparison section div.exclusive_banner {
+    line-height: 21px;
+    color: #005ea8;
+    height: 21px;
+    font-size: 9px;
+    background: #E6E6E6;
+    text-align: center;
+    padding: 0 2px;
+    margin: 0 auto;
+}
+
+#comparison section div.exclusive_banner {
+    line-height: 21px;
+    color: #005ea8;
+    height: 21px;
+    font-size: 9px;
+    background: #E6E6E6;
+    text-align: center;
+    padding: 0 2px;
+    margin: 0 auto;
+}
+
+
+#comparison .c24-tooltip.tariff_grade .c24-tooltip-arrow.down {
+    background-position: -577px -219px;
+}
+
+
+#comparison section div.exclusive_banner b,
+#comparison section div.exclusive_banner ul li
+{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#comparison section div.exclusive_banner b {
+    padding-top: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+#comparison section div.exclusive_banner ul.c24-list {
+    font-size: 1.1em;
+}
+
+#comparison section div.exclusive_banner .red_text {
+    background: #E40613;
+    width: 50px;
+    float: left;
+    color: white;
+    font-weight: bold;
+}
+
+#comparison section div.exclusive_banner .text {
+    width: 155px;
+    font-weight: bold;
+    float: left;
+}
+#comparison section div.exclusive_banner i {
+    width: 25px;
+    font-size: 14px;
+    margin-top: 4px;
+    float: left;
+    color: rgb(121, 121, 121);
+}
+
+/** view the close icon in section header, when section is opened **/
+#comparison section.open > header .switch {
+    background-position: 0 0;
+}
+
+/** view the open icon in section header, when section is closed **/
+#comparison section.close > header .switch {
+    background-position: 0 -6px;
+}
+
+/** view the open icon in section header, when section is closed **/
+#comparison section.close > article,
+#comparison section.close > p {
+    display:none;
+}
+
+/** section description **/
+#comparison section > p {
+    display: table-caption;
+    border: 1px solid #dcdcdc;
+    margin: 0;
+    padding: 4px;
+    border-top: 0;
+}
+
+/** headline of each section **/
+#comparison section > header h3 {
+    color: #1A5EA4;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+/** section article is used as table row **/
+#comparison section > article{
+    display: table-row;
+}
+
+
+/** NOTE **/
+#comparison section > article .tariff_grade {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/** NOTE **/
+#comparison section > article .note_tariff {
+    display: table-cell;
+    padding-top: 5px;
+    left: 0;
+    position: relative;
+    right: 0;
+    vertical-align: bottom;
+    width: 350px;
+}
+
+/** tariff numeric price in tarif info cell **/
+#comparison section > article > div div.logo {
+    text-align: center;
+}
+
+
+/** tariff numeric price in tarif info cell **/
+#comparison section > article > div div.name {
+    text-align: center;
+}
+
+/** tariff numeric price in tarif info cell **/
+#comparison section > article > div div.price {
+    clear:both;
+    margin-top: 15px;
+}
+
+/** tariff numeric price in tarif info cell **/
+#comparison section > article > div div.price span:first-child {
+    padding: 7px 0 5px 0;
+    clear:both;
+    color: #1A5EA4;
+    font-size: 1.67rem;
+    font-weight: bold;
+}
+
+/** each cell in the table **/
+#comparison section > article > div{
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+    width: 25%;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 0 solid #dcdcdc;
+}
+
+/** each cell in the table **/
+#comparison section.buttons article > div{
+    vertical-align: middle;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/** each column in the table **/
+#comparison section > article > div:first-child{
+    text-align: left;
+    max-width: 31%;
+    min-width: 24%;
+    border-left: 1px solid #dcdcdc;
+    vertical-align: middle;
+}
+
+/** each column in the table **/
+#comparison > header > section > article:first-of-type > div:first-child{
+    font-weight:bold;
+}
+
+/** each article headline is currently the first cell in this row **/
+#comparison section > article > div:first-child span.feature-title {
+    display: block;
+    float: left;
+    width: 85%;
+    padding: 6px 4px 4px;
+}
+
+/** set the help icon trigger at the end of the cell **/
+#comparison section > article > div:first-child .c24-tooltip-trigger{
+    float: right;
+}
+
+/** adjust the help icon in the row headline  **/
+#comparison section > article > div:first-child .c24-tooltip{
+    float: right;
+    padding: 4px;
+    vertical-align: top;
+}
+
+/** default icon settings, displayed in a cell **/
+#comparison section > article > div .name {
+    font-weight: normal;
+    padding-top: 3px;
+}
+
+/** used to hide tarif rows that was currently not displayed in the table **/
+#comparison section > article div.hide{
+    display: none;
+}
+
+
+#comparison section > article div.back_button {
+    text-align: center;
+}
+
+#comparison section > article div.back_button {
+    text-align: center;
+}
+
+/** the comparison footer views currently the icon legend **/
+#comparison footer {
+    width: 500px;
+    padding: 12px 0;
+    margin: 10px auto;
+}
+
+/** old but gold clearfix to show footers background color **/
+#comparison footer:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+}
+
+/** legend wrapper to center them **/
+#comparison footer > div {
+    width: auto;
+    margin: 0 auto;
+}
+
+/** legend wrapper to center them **/
+#comparison footer > div {
+    width: auto;
+    margin: 0 auto;
+
+    span {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        margin-left: 5px;
+        position: relative;
+        top: -3px;
+    }
+}
+
+/** adjust the success icon **/
+#comparison footer .icon.OK {
+    height: 18px;
+    background-repeat:no-repeat;
+    background-image: url("/assets/desktop/images/png/icons/check_circle_green_18.png");
+    width: 100px;
+    text-align: left;
+    float: left;
+    background-position: left center;
+    padding-left: 24px;
+}
+
+/** adjust the failed icon **/
+#comparison footer .icon.NotOK {
+    height: 18px;
+    background-repeat:no-repeat;
+    background-image: url("/assets/desktop/images/png/icons/cross_circle_red_18.png");
+    text-align: left;
+    float: left;
+    background-position: left center;
+    padding-left: 24px;
+}
+
+#comparison .action_ribbon,
+#comparison .promo_ribbon   {
+    .c24-tooltip-content {
+        padding: 10px;
+    }
+}
+
+#comparison .action_ribbon .c24-tooltip {
+    border-bottom: 0;
+}
+
+
+#comparison .action_ribbon p.title {
+    padding: 4px 10px 4px 10px;
+    margin: 0;
+    font-size: 1.17rem;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+#comparison .action_ribbon {
+    background: #f6b800 none repeat scroll 0 0;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.17);
+    left: -9px;
+    position: absolute;
+    right: 10%;
+    top: -1px;
+    z-index: 2000;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#comparison .action_ribbon:before {
+    background: url("/assets/desktop/images/png/icons/label_left_yellow.png") no-repeat;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 9px;
+    height: 38px;
+    display: block;
+    position: absolute;
+}
+
+#comparison .c24-compare-action-ribbon-container {
+    height: 25px;
+}
+
+#comparison .promo_ribbon p.title {
+    padding: 4px 10px 4px 10px;
+    margin: 0;
+    font-size: 1.17rem;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+#comparison .promo_ribbon {
+    background: #7AB51D none repeat scroll 0 0;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.17);
+    left: -9px;
+    position: absolute;
+    right: 10%;
+    top: -1px;
+    z-index: 2000;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#comparison .promo_ribbon:before {
+    background: url("/assets/desktop/images/png/icons/label_left_green.png") no-repeat;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 9px;
+    height: 38px;
+    display: block;
+    position: absolute;
+}
+
+#comparison .promo_ribbon .info_circle,
+#comparison .action_ribbon .info_circle {
+    background: url("/assets/desktop/images/png/icons/info_white_12.png") no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+
+#comparison .document-link.pdf-icon {
+    background-image: url("/assets/desktop/images/gif/icons/pdf_icon.gif");
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    padding-left: 19px;
+    text-align: left;
+    display: block;
+    float: left;
+    width:100%;
+    font-size: 11px;
+}
+
+/** each column in the table **/
+#comparison > header > section > article div.close svg{
+    padding-top: 10px;
+    padding-right: 14px;
+}
+
+#comparison {
+    hr {
+        height:1px;
+        background-color: #dcdcdc;
+        border: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.c24-compare-border-bottom {
+    border-bottom: 1px solid #dcdcdc;
+
+    article > div:first-child {
+        padding-left: 10px !important;
+    }
+}
+
+#comparison {
+    .tariff-header-button-box {
+        padding: 20px 17px 14px 17px;
+    }
+
+    .close {
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    .logo-container {
+        height: 50px;
+        margin-bottom: 10px;
+
+        .display-flex();
+        .flex-justify-content(center);
+        .flex-align-items(center);
+        vertical-align: baseline;
+
+        .logo-container-wrapper {
+            .logo {
+                max-width: @logo-max-width;
+                height: @logo-max-height;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .additional-premium-container {
+        min-height: 30px;
+    }
+
+    .additional-premium {
+        margin-bottom: 17px;
+
+        &--no-margin-bottom {
+            margin-bottom: 0;
+        }
+    }
+
+    .additional-premium-comment {
+        margin-bottom: 17px;
+
+        &--no-margin-bottom {
+            margin-bottom: 0;
+        }
+    }
+
+    .price {
+        color: @brand-primary;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .add-tariff {
+        text-align: center;
+        padding: 9px 0 0 0;
+    }
+
+    .category {
+        color: #333;
+        font-size: 12px;
+        margin: 0;
+        padding: 14px 0 7px 0;
+        line-height: 16px;
+    }
+
+    .feature-col {
+        border-bottom: 1px solid #dcdcdc;
+
+        .flex-container {
+            .display-flex();
+
+            .description {
+                .flex(1);
+                .flex-align-self(center);
+                text-align: left;
+                padding: 4px 0 1px 8px;
+            }
+        }
+    }
+
+    .feature-tooltip {
+        margin-top: 4px;
+        position: relative;
+    }
+
+    .feature-tooltip:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+.compare__disclaimer {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 11px;
+}
+
+.compare__icon {
+    .fa-icon();
+    font-size: 21px;
+    display: inline-block;
+    padding: 2px 0 0 13px;
+    .flex-align-self(center);
+
+    &:before {
+        content: '\f06a';
+        color: @color-tooltip-icon-default;
+    }
+
+    &--positive {
+        &:before {
+            content: '\f058';
+            color: @color-positive-icon-default;
+        }
+    }
+
+    &--mediocre {
+        &:before {
+            content: '\f058';
+            color: @c24-color-vibrant-yellow;
+        }
+    }
+
+    &--not-specified {
+        &:before {
+            content: '\f057';
+            color: @color-not-specified-icon-default;
+        }
+    }
+
+    &--negative {
+        &:before {
+            content: '\f057';
+            color: @color-negative-icon-default;
+        }
+    }
+}

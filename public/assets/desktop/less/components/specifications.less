@@ -1,0 +1,124 @@
+.specifications {
+  @headline-color: @brand-primary;
+  @border-color: #dcdcdc;
+  @paragraph-color: #575757;
+  @edit-link-color: @brand-primary;
+  @action-logo-fill: @brand-primary;
+
+  .display-flex();
+
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid @border-color;
+
+  &--no-border {
+    padding: 8px 15px;
+    border-bottom: 0;
+    margin-bottom: 12px;
+  }
+
+  &--no-spacing-bottom {
+    margin-bottom: 0;
+  }
+
+  &__main {
+    .display-flex();
+    .flex(1);
+
+    margin-right: 20px;
+  }
+
+  &__content {
+    width: 525px;
+  }
+
+  &__headline {
+    .font-size(21px);
+
+    color: @headline-color;
+    margin: 0 0 10px;
+    font-weight: bold;
+  }
+
+  &__text {
+    .font-size(12px);
+
+    color: @paragraph-color;
+    margin: 0;
+  }
+
+  &__paragraph-text {
+    padding-right: 5px;
+  }
+
+  &__edit {
+    text-align: left;
+  }
+
+  &__edit-link {
+    .font-size(12px);
+
+    color: @edit-link-color;
+    margin-top: auto;
+    height: 16px;
+    position: absolute;
+    z-index: 1;
+    padding-left: 5px;
+  }
+
+  &__action {
+    .display-flex();
+    .flex-direction-column();
+    .flex-justify-content(center);
+
+    margin-right: 40px;
+  }
+
+  &__action-link {
+    .transform(translate(-50px));
+
+    display: block;
+    position: absolute;
+    z-index: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__action-logo-container {
+    display: block;
+    text-align: center;
+  }
+
+  &__action-logo {
+    fill: @action-logo-fill;
+    width: 27px;
+    height: 27px;
+  }
+
+  &__action-link-text {
+    .font-size(10px);
+  }
+
+  &__action-link-text {
+    .font-size(10px);
+  }
+
+  &__tuev {
+    .display-flex();
+    .flex-align-items(center);
+
+    margin-right: 15px;
+  }
+
+  &__tuev-logo {
+    height: 50px;
+    width: 92px;
+  }
+
+  &__ekomi {
+    .display-flex();
+    .flex-align-items(center);
+  }
+}

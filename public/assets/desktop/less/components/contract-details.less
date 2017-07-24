@@ -1,0 +1,43 @@
+@contract-details-table-container-border-bottom-color: @c24-color-light-grey;
+
+.contract-details {
+  &__table-container {
+    border-bottom: 1px solid @contract-details-table-container-border-bottom-color;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__table {
+    width: 100%;
+
+    &--fixed-height-1-line {
+      height: 18px;
+    }
+
+    &--fixed-height-5-lines {
+      height: 90px;
+    }
+  }
+
+  &__table-header {
+    width: 320px;
+  }
+
+  &__table-header,
+  &__table-cell {
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+    line-height: 18px;
+  }
+
+  &__table-row-subsequent {
+    padding: 6px 0 0;
+  }
+}

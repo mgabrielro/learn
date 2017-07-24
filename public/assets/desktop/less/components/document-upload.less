@@ -1,0 +1,149 @@
+@document-upload-section-border-color: @border-color-primary;
+@document-upload-select-button-hint-color: #8c8c8c;
+@document-upload-file-information-container-background-color: @c24-color-light-grey;
+@document-upload-file-information-size-color: #8c8c8c;
+@document-upload-file-information-error-color: @c24-color-red;
+@document-upload-file-information-remove-color: #8c8c8c;
+@document-upload-file-information-remove-hover-color: @grey-darker;
+@document-upload-select-border-color: @border-color-primary;
+@document-upload-select-hover-border-color: @border-color-hover;
+@document-upload-select-active-border-color: @brand-primary;
+
+.document-upload {
+  &__section {
+    padding: 20px;
+    border: 1px solid @document-upload-section-border-color;
+    border-bottom-width: 0;
+    width: 727px;
+
+    &--border-bottom {
+      border-bottom-width: 1px;
+    }
+
+    &--margin-top {
+      margin-top: 20px;
+    }
+  }
+
+  &__section-header {
+    .font-size(18px);
+
+    margin: 0 0 20px;
+  }
+
+  &__row {
+    .display-flex();
+
+    margin-bottom: 20px;
+    position: relative;
+
+    &--before-error {
+      margin-bottom: 10px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__column {
+    padding-right: 20px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    &--flex {
+      .flex(1);
+    }
+
+    &--document-type {
+      width: 200px;
+    }
+
+    &--error {
+      .font-size(11px);
+
+      color: @document-upload-file-information-error-color;
+    }
+  }
+
+  &__select-button-hint {
+    .font-size(11px);
+
+    color: @document-upload-select-button-hint-color;
+    padding: 4px 0px 4px 10px;
+    width: 350px;
+  }
+
+  &__required-document-list {
+    list-style: none;
+  }
+
+  &__required-document-list-item {
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+
+  &__required-document-list-icon {
+    padding-right: 20px;
+    position: relative;
+    top: 5px;
+  }
+
+  &__file-information-container {
+    .display-flex();
+
+    background-color: @document-upload-file-information-container-background-color;
+    border-radius: 4px;
+    padding: 10px 15px;
+  }
+
+  &__file-information {
+    .flex(1);
+  }
+
+  &__file-information-size {
+    .font-size(11px);
+
+    color: @document-upload-file-information-size-color;
+  }
+
+  &__file-information-remove {
+    color: @document-upload-file-information-remove-color;
+
+    &:hover {
+      cursor: pointer;
+      color: @document-upload-file-information-remove-hover-color;
+    }
+  }
+
+  &__select {
+    .appearance(none);
+    .font-size(13px);
+    .box-sizing(border-box);
+
+    width: 100%;
+    height: 40px;
+    padding: 0 7px;
+    background: transparent url('/assets/desktop/images/png/icons/selectArrow.png') no-repeat right 7px;
+    line-height: 20px;
+    border: 1px solid @document-upload-select-border-color;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:hover {
+      border-color: @document-upload-select-hover-border-color;
+    }
+
+    &:focus,
+    &:active {
+      background-position: right -18px;
+      border-color: @document-upload-select-active-border-color;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,286 @@
+.tariff-details {
+    @headline-item-color: #8c7777;
+    @border-color: @border-color-primary;
+    @column-background-color: #f7f7f7;
+    @column-content-background-color: #fff;
+    @group-label-color: @brand-primary;
+    @group-icon-color: @group-label-color;
+    @grade-color: #fff;
+    @grade-green-background-color: #77b61b;
+    @grade-yellow-background-color: #f3bd00;
+    @grade-gray-background-color: #cecece;
+    @content-color: @grey-darker;
+    @download-icon-fill: @brand-primary;
+    @icon_after_color: #fff;
+
+    @row-border: 1px solid @border-color;
+
+    &__headline {
+        .display-flex();
+    }
+
+    &__headline-spacer {
+        .flex(1 1 0%);
+    }
+
+    &__headline-item {
+        .font-size(13px);
+
+        color: @headline-item-color;
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    &__block {
+        &--level-1 {
+            margin-top: 10px;
+            margin-bottom: 3px;
+            border-bottom: @row-border;
+        }
+
+        &--promoted {
+            margin-bottom: 13px;
+            border-bottom: @row-border;
+        }
+    }
+
+    &__row {
+        .display-flex();
+
+        height: auto;
+        border: @row-border;
+        border-bottom-width: 0;
+
+        &--group {
+            cursor: pointer;
+            height: 40px;
+        }
+
+        &--promoted {
+            cursor: auto;
+        }
+    }
+
+    &__column {
+        .flex(1 1 0%);
+        .flex-align-items(center);
+        .flex-justify-content(center);
+
+        background-color: @column-background-color;
+        border-right: @row-border;
+        padding: 7px 0 10px 10px;
+        min-height: 23px;
+
+        &:last-of-type {
+            border-right: 0;
+        }
+
+        &--content {
+            background-color: @column-content-background-color;
+        }
+
+        &--total {
+            font-weight: bold;
+        }
+
+        &--total-content {
+            background: @column-background-color;
+        }
+    }
+
+    &--single &__column {
+        &:first-child {
+            .flex(0 0 393px);
+        }
+    }
+
+    &__group {
+        .display-flex();
+        .flex-align-items(center);
+    }
+
+    &__group-label {
+        .flex(1 1 0%);
+        .font-size(14px);
+
+        color: @group-label-color;
+        font-weight: bold;
+        line-height: 14px;
+
+        &--level-1 {
+            padding-right: 15px;
+        }
+
+        &--level-2 {
+            .font-size(11px);
+        }
+    }
+
+    &__group-icon {
+        &:after {
+            .fa-icon();
+            .font-size(24px);
+
+            content: @fa-var-caret-down;
+            color: @group-icon-color;
+            width: 25px;
+        }
+
+        &--open:after {
+            content: @fa-var-caret-up;
+        }
+    }
+
+    &__group-content {
+        .flex(1 1 0%);
+        .display-flex();
+        .flex-justify-content(flex-end);
+    }
+
+    &__points {
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    &__grade {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 5px;
+        color: @grade-color;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 2px;
+
+        &--green {
+            background-color: @grade-green-background-color;
+        }
+
+        &--yellow {
+            background-color: @grade-yellow-background-color;
+        }
+
+        &--gray {
+            background-color: @grade-gray-background-color;
+        }
+    }
+
+    &__label {
+        .font-size(11px);
+        .display-flex();
+    }
+
+    &__content {
+        .display-flex();
+
+        color: @content-color;
+    }
+
+    &__comment {
+        .flex(1 1 0%);
+        .font-size(11px);
+
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &--single &__comment {
+        .flex(0 0 157px);
+    }
+
+    &__comment-icon {
+        .fa-icon();
+        .flex-align-self(center);
+        .font-size(21px);
+
+        display: inline-block;
+
+        &:before {
+            content: @fa-var-exclamation-circle;
+            color: @color-tooltip-icon-default;
+        }
+
+        &--positive {
+            &:before {
+                content: @fa-var-check-circle;
+                color: @color-positive-icon-default;
+            }
+        }
+
+        &--negative {
+            &:before {
+                content: @fa-var-times-circle;
+                color: @color-negative-icon-default;
+            }
+        }
+    }
+
+    &__description {
+        .flex(1 1 0%);
+        .font-size(11px);
+
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    &__download-link {
+        .font-size(11px);
+
+        line-height: 25px;
+    }
+
+    &__download-icon {
+        background: url(/assets/desktop/images/png/icons/pdfdownload.png) no-repeat;
+        background-size: contain;
+        height: 25px;
+        width: 25px;
+        padding-right: 5px;
+        float: left;
+    }
+
+    &__promoted-block {
+        margin-bottom: 13px;
+        border-bottom: @row-border;
+    }
+
+    &__price-part {
+        font-weight: bold;
+    }
+
+    &__icon {
+        .fa-icon();
+
+        // Bugfix: Workaround for proper rendering of scaled icons.
+        // See: https://github.com/FortAwesome/Font-Awesome/issues/4296
+        .transform-rotation(0.001deg);
+        .font-size(19px);
+
+        display: inline-block;
+        position: relative;
+        margin-left: auto;
+        margin-right: 10px;
+
+        &:before {
+            content: '\f059';
+            color: @color-tooltip-icon-default;
+            position: relative;
+            z-index: 1;
+        }
+
+        // Add circle icon under the general icon to set a white background and prevent transparency
+        &:after {
+            content: '\f111';
+            color: @icon_after_color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+
+    &__bold-text {
+        font-weight: bold;
+    }
+}

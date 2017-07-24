@@ -1,0 +1,46 @@
+.tariff-register {
+    @border-color: @c24-color-light-grey;
+    @lock-icon-fill: #227F03;
+    @secure-info-color: @lock-icon-fill;
+
+    width: 727px;
+    box-sizing: border-box;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    margin-top: 15px;
+
+    &__banderole {
+        .display-flex();
+        .flex-justify-content(space-between);
+    }
+
+    &__banderole-item {
+        .flex(1);
+    }
+
+    &__main {
+        .display-flex();
+        .flex-justify-content(space-between);
+
+        padding: 20px;
+    }
+
+    &__secure-info {
+        .display-flex();
+        .flex-justify-content(flex-end);
+        .font-size(12px);
+
+        color: @secure-info-color;
+        padding: 0 15px 10px;
+        margin-bottom: 40px;
+        width: 727px;
+        box-sizing: border-box;
+    }
+
+    &__lock-icon {
+        fill: @lock-icon-fill;
+        width: 17px;
+        height: 17px;
+        margin-left: 5px;
+    }
+}

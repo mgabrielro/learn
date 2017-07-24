@@ -1,0 +1,10 @@
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden`
+// Source: https://github.com/hzdg/bedrock/blob/master/mixins/backface-visibility.less
+.backface-visibility(@visibility) {
+  -webkit-backface-visibility: @visibility;
+  -moz-backface-visibility: @visibility;
+  -ms-backface-visibility: @visibility;
+  backface-visibility: @visibility;
+}

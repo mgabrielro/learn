@@ -1,0 +1,41 @@
+@contract-documents-item-border-bottom-color: @c24-color-light-grey;
+@contract-documents-icon-fill: @brand-primary;
+
+.contract-documents {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    border-bottom: 1px solid @contract-documents-item-border-bottom-color;
+    height: 48px;
+    line-height: 48px;
+    box-sizing: border-box;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    .display-flex();
+    .flex-align-items(center);
+
+    height: 100%;
+    padding: 0 15px;
+  }
+
+  &__icon {
+    width: 27px;
+    height: 26px;
+    margin-right: 16px;
+    fill: @contract-documents-icon-fill;
+  }
+
+  &__label {
+    .flex(1);
+    .font-size(14px);
+  }
+}

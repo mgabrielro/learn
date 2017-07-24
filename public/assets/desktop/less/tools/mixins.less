@@ -1,0 +1,286 @@
+// TODO: Refacotr
+// - Split in categories (e.g. flex.less)
+
+.appearance(@value){
+  -webkit-appearance: @value;
+  -moz-appearance: @value;
+  -ms-appearance: @value;
+  -o-appearance: @value;
+  appearance: @value;
+}
+
+.background-color-that-darkens-on-hover(@color, @percent:5%) {
+  background-color: @color;
+
+  &:hover {
+    background-color: darken(@color, @percent);
+  }
+}
+
+.display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.fa-base() {
+  .fa-icon();
+}
+
+.flex(@value) {
+  -webkit-flex: @value;
+  -ms-flex: @value;
+  flex: @value;
+}
+
+.flex-flow(@value) {
+  flex-flow: @value;
+  -ms-flex-flow: @value;
+}
+
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+  -ms-flex-basis: @width;
+  flex-basis: @width;
+}
+
+.flex-direction-column(){
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-align-items(@value) {
+  .ms-flex-align-items(@value);
+  -webkit-align-items: @value;
+  align-items: @value;
+}
+
+.flex-wrap(@value) {
+  -webkit-flex-wrap: @value;
+  -ms-flex-wrap: @value;
+  flex-wrap: @value;
+}
+
+.flex-align-self(@value) {
+  .ms-flex-align-self(@value);
+  -webkit-align-self: @value;
+  align-self: @value;
+}
+
+.flex-justify-content(@value){
+  -webkit-justify-content: @value;
+  -ms-flex-pack: @value;
+  justify-content: @value;
+}
+
+.transition (@value1,@value2:X,...)
+{
+  // See https://stackoverflow.com/questions/5510568/multiple-properties-are-getting-treated-as-separate-arguments-in-mixins/13490523#13490523
+  @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+
+  -webkit-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}
+
+.ms-flex-align-items(@value) when (@value = flex-start) {
+  -ms-flex-align: start;
+}
+
+.ms-flex-align-items(@value) when (@value = flex-end) {
+  -ms-flex-align: end;
+}
+
+.ms-flex-align-items(@value) when (@value = center), (@value = baseline), (@value = stretch) {
+  -ms-flex-align: @value;
+}
+
+.ms-flex-align-self(@value) when (@value = flex-start) {
+  -ms-flex-item-align: start;
+}
+
+.ms-flex-align-self(@value) when (@value = flex-end) {
+  -ms-flex-item-align: end;
+}
+
+.ms-flex-align-self(@value) when (@value = auto), (@value = center), (@value = baseline), (@value = stretch) {
+  -ms-flex-item-align: @value;
+}
+
+.animation(@value) {
+          animation: @value;
+  -webkit-animation: @value;
+     -moz-animation: @value;
+       -o-animation: @value;
+      -ms-animation: @value;
+}
+
+.animation-iteration-count(@value) {
+          animation-iteration-count: @value;
+  -webkit-animation-iteration-count: @value;
+     -moz-animation-iteration-count: @value;
+       -o-animation-iteration-count: @value;
+      -ms-animation-iteration-count: @value;
+}
+
+.transform-rotation(@value) {
+                 transform: rotate(@value);
+         -webkit-transform: rotate(@value);
+            -moz-transform: rotate(@value);
+              -o-transform: rotate(@value);
+             -ms-transform: rotate(@value);
+}
+
+.transform-origin(@value) {
+          transform-origin: @value;
+  -webkit-transform-origin: @value;
+     -moz-transform-origin: @value;
+       -o-transform-origin: @value;
+      -ms-transform-origin: @value;
+}
+
+.animation-fill-mode(@value) {
+          animation-fill-mode: @value;
+  -webkit-animation-fill-mode: @value;
+     -moz-animation-fill-mode: @value;
+       -o-animation-fill-mode: @value;
+      -ms-animation-fill-mode: @value;
+}
+
+.keyframes(@name; @frames) {
+  @-webkit-keyframes @name {
+    @frames();
+  }
+  @-moz-keyframes @name {
+    @frames();
+  }
+  @-ms-keyframes @name {
+    @frames();
+  }
+  @-o-keyframes @name {
+    @frames();
+  }
+  @keyframes @name {
+    @frames();
+  }
+}
+
+.font-size(@font-size: @base-font-size) {
+  @rem: (@font-size / @base-font-size);
+  font-size: @font-size * 1px;
+  font-size: unit(@rem, rem);
+}
+
+.box-sizing(@string) {
+  -moz-box-sizing: @string;
+  -webkit-box-sizing: @string;
+  box-sizing: @string;
+}
+
+.grid-column-default() {
+  .box-sizing(border-box);
+
+  margin-right: 20px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.transform(@value) {
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -ms-transform: @value;
+  -o-transform: @value;
+  transform: @value;
+}
+
+.opacity(@value) {
+  -webkit-opacity: @value;
+  -moz-opacity: @value;
+  opacity: @value;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+}
+
+.grid() {
+  &--col-1 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 1');
+  }
+
+  &--col-2 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 2');
+  }
+
+  &--col-3 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 3');
+  }
+
+  &--col-4 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 4');
+  }
+
+  &--col-5 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 5');
+  }
+
+  &--col-6 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 6');
+  }
+
+  &--col-7 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 7');
+  }
+
+  &--col-8 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 8');
+  }
+
+  &--col-9 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 9');
+  }
+
+  &--col-10 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 10');
+  }
+
+  &--col-11 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 11');
+  }
+
+  &--col-12 {
+    .grid-column-default();
+
+    width: calc(~'100% / 12 * 12');
+  }
+}

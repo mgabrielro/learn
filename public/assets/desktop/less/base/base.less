@@ -1,0 +1,57 @@
+html {
+  font-size: @base-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: @brand-primary;
+  line-height: 19px;
+  font-weight: normal;
+  margin: .5em 0;
+}
+
+p {
+  margin: .5em 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+select:focus::-ms-value {
+  background: none;
+  color: inherit;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: @c24-color-nobel-grey;
+}
+
+// Hide the spinner in input[type=number]
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  opacity: 0;
+}

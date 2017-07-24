@@ -1,0 +1,32 @@
+@tooltip-content-headline-color: @brand-primary;
+@tooltip-content-list-item-icon-color: @brand-secondary;
+
+.tooltip-content {
+  line-height: 15px;
+
+  &__headline {
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: @tooltip-content-headline-color;
+    font-size: 12px;
+  }
+
+  &__list-item {
+    .flex(1);
+
+    list-style: none;
+    position: relative;
+    padding: 3px 0 7px 28px;
+
+    &:before {
+      .fa-icon();
+      .font-size(21px);
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '\f00c';
+      color: @tooltip-content-list-item-icon-color;
+    }
+  }
+}

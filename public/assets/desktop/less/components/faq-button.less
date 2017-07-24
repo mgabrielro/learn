@@ -1,0 +1,78 @@
+.faq-button {
+  @main-width: 79px;
+  @main-height: 84px;
+  @main-background-color: @white;
+  @main-border-color: @brand-primary;
+  @icon-fill: @brand-primary;
+  @label-color: @brand-primary;
+  @top: 94px;
+
+  .opacity(0);
+
+  position: fixed;
+  top: @top;
+  width: 100%;
+  z-index: 0;
+
+  &--active {
+    .opacity(1);
+    .transition(opacity .5s);
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: @main-height;
+    min-width: 994px;
+    overflow: hidden;
+  }
+
+  &__aligner {
+    position: relative;
+    width: 994px;
+    margin: auto;
+  }
+
+  &__main {
+    .display-flex();
+    .flex-direction-column();
+    .flex-align-items(center);
+
+    background: @main-background-color;
+    width: @main-width;
+    height: @main-height;
+    padding: 5px 0 0;
+    border: 3px solid @main-border-color;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: -((@main-width) + 22px);
+    box-sizing: border-box;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__icon-container {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  &__icon {
+    fill: @icon-fill;
+    enable-background: new 0 0 100 100;
+  }
+
+  &__label {
+    .font-size(13px);
+
+    color: @label-color;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+  }
+}

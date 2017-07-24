@@ -1,0 +1,51 @@
+.tabs {
+  @border-color: #cecece;
+
+  @header-item-color: @brand-primary;
+  @header-item-background-color: #f4f4f4;
+  @header-item-active-background-color: #fff;
+  @header-item-active-border-bottom-color: #fff;
+
+  &__header-container {
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__header {
+    margin: 0 0 -1px;
+    padding-left: 15px;
+  }
+
+  &__header-item {
+    .font-size(14px);
+
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    line-height: 30px;
+    color: @header-item-color;
+    background-color: @header-item-background-color;
+    padding: 1px 1px 0;
+    border-bottom: 1px solid @border-color;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      background-color: @header-item-active-background-color;
+      padding: 0;
+      border: 1px solid @border-color;
+      border-bottom-color: @header-item-active-border-bottom-color;
+    }
+  }
+
+  &__content {
+    padding-top: 20px;
+  }
+
+  &__content-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

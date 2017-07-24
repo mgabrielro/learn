@@ -1,0 +1,78 @@
+.checkbox {
+  @label-color: #005ea8;
+  @label-focus-color: @label-color;
+  @label-checked-border-color: @label-color;
+  @label-hover-color: #333;
+  @label-hover-border-color: #999;
+  @label-border-color: #cdcdcd;
+  @label-background: @white;
+
+  margin-bottom: 10px;
+  min-height: 18px;
+  position: relative;
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--inline-block {
+    display: inline-block;
+  }
+
+  &__input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+  }
+
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    line-height: 16px;
+    min-height: 17px;
+    padding: 1px 23px 0 26px;
+
+    &:before {
+      .fa-base();
+      .font-size(14px);
+
+      content: '';
+      color: @label-color;
+      background: @label-background;
+      border: 2px solid @label-border-color;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  &--vertical-centered &__label:before {
+    top: 50%;
+    margin-top: -9px;
+  }
+
+  &__input:checked + &__label:before {
+    content: @fa-var-check;
+    color: #fff;
+    border-color: @label-checked-border-color;
+    background-color: @label-checked-border-color;
+  }
+
+  &:hover {
+    .checkbox__label {
+      color: @label-hover-color;
+    }
+  }
+
+  &:hover &__input:checked + &__label:before {
+    border-color: @label-checked-border-color;
+  }
+
+  &--flex-container {
+    .display-flex();
+  }
+}

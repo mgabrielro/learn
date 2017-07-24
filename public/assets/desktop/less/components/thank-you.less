@@ -1,0 +1,181 @@
+.thank-you {
+    @headline-color: @brand-primary;
+    @color: #575757;
+    @steps-headline-color: @brand-primary;
+    @steps-background-color: #efeff4;
+
+    .display-flex();
+    .font-size(13px);
+
+    line-height: 18px;
+    color: @color;
+    padding-top: 10px;
+
+    &__main {
+        .flex(1);
+
+        padding: 20px 20px 0 0;
+        box-sizing: border-box;
+    }
+
+    &__intro {
+        padding-left: 20px;
+    }
+
+    &__headline {
+        .display-flex();
+        .font-size(18px);
+
+        color: @headline-color;
+        line-height: 1.1;
+        margin: 0 0 25px;
+    }
+
+    &__check-icon {
+        margin-right: 10px;
+        width: 22px;
+    }
+
+    &__dialog {
+        margin-bottom: 15px;
+    }
+
+    &__tariff-data {
+        margin-bottom: 25px;
+    }
+
+    &__tariff-data-header {
+        padding: 0 10px 0 0;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    &__tariff-data-cell {
+        font-weight: bold;
+    }
+
+    &__steps {
+        background-color: @steps-background-color;
+        padding: 20px;
+    }
+
+    &__steps-headline {
+        .font-size(18px);
+
+        color: @steps-headline-color;
+        padding: 0 0 15px;
+    }
+
+    &__step-icon {
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+
+    &__app-download-link:hover {
+       text-decoration: none;
+    }
+
+    &__app-download-image {
+        width: 80px
+    }
+
+    &__step-headline {
+        .display-flex();
+        .font-size(13px);
+
+        margin: 0;
+        color: inherit;
+        line-height: 20px;
+    }
+
+    &__step-content {
+        padding: 5px 0 20px 30px;
+    }
+
+    &__app-download {
+        padding: 7px 0 0;
+    }
+
+    &__app-download-image {
+        width: 80px;
+        height: 23px;
+        display: inline-block;
+    }
+
+    &__app-store-badge {
+        background: url('/assets/desktop/images/svg/app-store-badge.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    &__contact {
+        border-left: 1px solid @border-color-primary;
+    }
+
+    &__contact-container {
+        width: 280px;
+        box-sizing: border-box;
+        padding: 20px 30px 20px 20px;
+    }
+
+    &__contact-phone-time {
+        .font-size(11px);
+
+        line-height: 11px;
+    }
+
+    &__contact-phone-number {
+        .font-size(16px);
+    }
+
+    &__contact-phone {
+        .display-flex();
+
+        color: @headline-color;
+        margin: 0 0 10px 0;
+    }
+
+    &__phone-icon {
+        height: 25px;
+        width: 30px;
+        margin: 3px 0 0;
+    }
+
+    &__contact-phone-data {
+        .flex(1);
+
+        padding: 0 10px;
+    }
+
+    &__contact-header {
+        .font-size(18px);
+
+        color: @headline-color;
+        margin: 10px 0 25px;
+    }
+
+    &__contact-email {
+        .display-flex();
+
+        color: @headline-color;
+    }
+
+    &__email-icon {
+        width: 30px;
+    }
+
+    &__subheadline {
+        margin-bottom: 20px
+    }
+
+    &__contact-content {
+        margin: 20px 0 10px;
+    }
+
+    &__contact-email-address {
+        .flex(1);
+
+        padding: 0 0 0 10px;
+    }
+}

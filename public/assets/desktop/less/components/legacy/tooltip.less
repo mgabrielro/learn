@@ -1,0 +1,120 @@
+/**
+ * Created by siegfried.diel on 06.11.2015.
+ */
+
+@tooltip-border-color: @blue;
+@tooltip-text-color: @c24-color-dark-grey;
+
+.c24-tooltip-trigger {
+  cursor: help;
+
+  &--pointer {
+    cursor: pointer;
+  }
+}
+
+.c24-tooltip-trigger .c24-tooltip-content {
+  display: none !important;
+}
+
+.c24-tooltip-trigger.dotted {
+  border-bottom: 1px #666666 dotted;
+}
+
+.c24-tooltip p {
+  margin: 0;
+}
+
+.c24-tooltip .qtip-content h1,
+.c24-tooltip .qtip-content h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #005EA8;
+  margin-top: 0;
+}
+
+.c24-tooltip .qtip-content .inner-heading {
+  margin: 0.5em 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #005EA8;
+}
+
+.c24-tooltip .qtip-content .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #B4B4B4;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 16px;
+  padding: 5px 5px 17px 17px;
+  height: 16px;
+  width: 16px;
+}
+
+.c24-tooltip .qtip-content .close:hover {
+  color: #999999;
+}
+
+.c24-tooltip .qtip-content ul.benefit_list {
+  list-style: outside none disc;
+  margin-bottom: 3px;
+  margin-left: 15px;
+  margin-top: 3px;
+  padding-left: 0;
+}
+
+.c24-tooltip .qtip-content ul.benefit_list li {
+  color: #666 !important;
+  font-weight: normal !important;
+}
+
+.c24-tooltip .qtip-content .alter_table {
+  margin-top: 10px;
+}
+
+.c24-tooltip .qtip-content .alter_table > tbody > tr > th {
+  color: #1a5ea4 !important;
+  font-size: 12px !important;
+  font-weight: bold;
+  padding: 0 !important;
+}
+
+.c24-tooltip .qtip-content .forecast-table {
+  width: 100%;
+}
+
+body .qtip-default {
+  border: 1px solid #dcdcdc;
+  background-color: #FFFFFF;
+  color: inherit;
+}
+
+body .qtip-icon .ui-icon,
+body .qtip-default .qtip-icon {
+  background: none;
+}
+
+body .qtip {
+  width: 270px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: @tooltip-text-color;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.45);
+  max-width: none;
+  max-height: none;
+  border: 1px solid @tooltip-border-color;
+}
+
+body .qtip-close {
+  right: 0;
+  top: 0;
+  outline: none;
+  border: none;
+}
+
+body .qtip-content {
+  padding: 15px 25px 15px 15px;
+  line-height: 16px;
+}

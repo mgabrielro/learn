@@ -1,0 +1,56 @@
+.tariff-grade {
+  @footer-color: #fff;
+
+  width: 68px;
+  height: 80px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+  // @TODO: Put svgs in sprite
+  background: url('/assets/desktop/images/svg/tariff-grade.svg');
+  box-sizing: border-box;
+  line-height: 1;
+  padding: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  &--gold {
+    padding: 2px;
+    background: url('/assets/desktop/images/svg/tariff-grade-gold.svg');
+  }
+
+  &__main {
+    height: 61px;
+    padding-top: 21px;
+    box-sizing: border-box;
+  }
+
+  &__grade {
+    .font-size(24px);
+
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &__label {
+    .font-size(8px);
+  }
+
+  &--gold &__main {
+    height: 60px;
+    padding-top: 20px;
+  }
+
+  &__footer {
+    .font-size(10px);
+
+    color: @footer-color;
+    font-weight: bold;
+    line-height: 17px;
+    height: 17px;
+
+    &--small-text {
+      .font-size(8px);
+
+      line-height: 18px;
+    }
+  }
+}

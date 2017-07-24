@@ -1,0 +1,83 @@
+@tooltip-info-arrow-vertical-color: transparent;
+@tooltip-info-arrow-horizontal-primary-color: #dcdcdc;
+@tooltip-info-arrow-horizontal-secondary-color: #fff;
+@tooltip-info-icon-primary-color: @brand-primary;
+@tooltip-info-icon-secondary-color: #fff;
+
+.tooltip-info {
+    width: 68px;
+    position: relative;
+    float: right;
+    display: inline;
+    margin-right: -20px;
+
+    &__content {
+        .font-size(11px);
+
+        position: absolute;
+        left: 67px;
+        width: 225px;
+        padding: 8px 14px 10px 28px;
+        box-sizing: border-box;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &__arrow {
+        transition: opacity 0.1s ease-in-out;
+        position: absolute;
+        width: 11px;
+        height: 0;
+        left: 41px;
+        top: 4px;
+        border-color: @tooltip-info-arrow-vertical-color @tooltip-info-arrow-horizontal-primary-color;
+        border-style: solid;
+        border-width: 16px 16px 16px 0;
+
+        &:after {
+            content: '';
+            border-color: @tooltip-info-arrow-vertical-color @tooltip-info-arrow-horizontal-secondary-color;
+            border-image: none;
+            border-style: solid;
+            border-width: 15px 15px 15px 0;
+            width: 1px;
+            left: 12px;
+            position: absolute;
+            top: -15px;
+        }
+    }
+
+    &__icon,
+    &__icon-white-circle {
+        .fa-icon();
+        .font-size(13px);
+
+        width: 18px;
+        height: 19px;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        cursor: pointer;
+        color: @tooltip-info-icon-primary-color;
+
+        &:before {
+            .font-size(21px);
+
+            content: "\f059";
+        }
+    }
+
+    &__icon-white-circle {
+        left: 26px;
+        top: 12px;
+
+        &:before {
+            .font-size(18px);
+
+            color: @tooltip-info-icon-secondary-color;
+            content: '\f111';
+        }
+    }
+}

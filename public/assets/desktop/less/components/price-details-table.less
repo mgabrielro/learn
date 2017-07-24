@@ -1,0 +1,82 @@
+.price-details-table {
+  @color: @grey-darker;
+  @saving-color: @brand-secondary;
+  @caption-color: #1a5ea4;
+  @cell-border-color: #cecece;
+  @footer-cell-background-color: #eaeaea;
+  @footer-cell-color: #1a5ea4;
+  @price-info-color: @c24-color-nobel-grey;
+
+  .font-size(12px);
+
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 10px;
+
+  &__caption {
+    .font-size(14px);
+
+    margin: 15px 0 10px;
+    color: @caption-color;
+    text-align: left;
+  }
+
+  &__header {
+    padding: 8px;
+    border-bottom: 1px solid @cell-border-color;
+    width: 502px;
+    vertical-align: top;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  &__cell {
+    padding: 8px;
+    border-bottom: 1px solid @cell-border-color;
+    vertical-align: top;
+
+    &--price {
+      width: 75px;
+      text-align: right;
+    }
+  }
+
+  &__cell--saving .tariff__saving {
+    .font-size(12px);
+  }
+
+  &__row:last-child &__header,
+  &__row:last-child &__cell {
+    border-bottom: 0;
+  }
+
+  &__row--saving &__header,
+  &__row--saving &__cell {
+    color: @saving-color;
+    font-weight: bold;
+  }
+
+  &__row--footer &__header,
+  &__row--footer &__cell {
+    background-color: @footer-cell-background-color;
+    color: @footer-cell-color;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--no-margin-bottom {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price-info {
+    display: inline-block;
+    color: @price-info-color;
+  }
+}

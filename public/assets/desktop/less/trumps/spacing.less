@@ -1,0 +1,38 @@
+// When we use this modifier, wie diverge from BEM
+// We do this, because we do not want to add the empty element class and avoid not needed class chaining
+// In this case, it is a helper class which can be used on all elements
+
+.spacing-classes(@name, @property) {
+  .spacing-@{name} {
+    &--none {
+      @{property}: 0;
+    }
+
+    &--small {
+      @{property}: 3px;
+    }
+
+    &--medium {
+      @{property}: 6px;
+    }
+
+    &--large {
+      @{property}: 9px;
+    }
+
+    &--x-large {
+        @{property}: 12px;
+    }
+
+    &--xx-large {
+        @{property}: 15px;
+    }
+
+    &--xxx-large {
+        @{property}: 25px;
+    }
+  }
+}
+
+.spacing-classes(m-top, margin-top);
+.spacing-classes(m-bottom, margin-bottom);

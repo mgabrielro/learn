@@ -1,0 +1,72 @@
+.bullets {
+  @icon-default-color: #b4b4b4;
+  @icon-positive-color: @brand-secondary;
+  @icon-neutral-color: @icon-default-color;
+  @icon-gift-color: @brand-primary;
+  @icon-plus-color: @brand-secondary;
+
+  &__item {
+    padding-left: 17px;
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 11px;
+    overflow: hidden;
+  }
+
+  &__icon {
+    .fa-icon();
+
+    font-size: 14px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    margin-left: 1px;
+
+    &:before {
+      content: @fa-var-exclamation-circle;
+      color: @icon-default-color;
+    }
+
+    &--positive {
+      &:before {
+        content: @fa-var-check-circle;
+        color: @icon-positive-color;
+      }
+    }
+
+    &--negative {
+      &:before {
+        content: @fa-var-exclamation-circle;
+        color: @color-negative-icon-default;
+      }
+    }
+
+    &--neutral {
+      &:before {
+        content: @fa-var-exclamation-circle;
+        color: @icon-neutral-color;
+      }
+    }
+
+    &--gift {
+      &:before {
+        content: @fa-var-gift;
+        color: @icon-gift-color;
+      }
+    }
+
+    &--plus {
+      margin-top: 0;
+
+      &:before {
+        content: @fa-var-plus;
+        color: @icon-plus-color;
+      }
+    }
+
+    &--margin-top {
+      margin-top: 9px;
+    }
+  }
+}
