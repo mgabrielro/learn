@@ -19,7 +19,6 @@
     "libsJS": {
       "src": [
         "./bower_components/jquery/dist/jquery.min.js",
-        "./public/assets/desktop/js/namespace.js",
         "./public/assets/desktop/js/libs/*.js"
       ],
       "target": {
