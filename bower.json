@@ -15,12 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "svg4everybody": "2.1.8",
     "normalize-css": "^6.0.0",
     "font-awesome": "4.7.0",
     "jquery": "3.2.1",
-    "spin.js": "2.3.2",
-    "jquery.popup.overlay": "1.7.x",
     "less": "^2.7.2"
   },
   "devDependencies": {}

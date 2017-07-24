@@ -1,6 +1,5 @@
-// var gulp = require('gulp-help')(require('gulp')),
 var gulp = require('gulp'),
-    definitions = require('./gulp//config/definitions.json'),
+    definitions = require('./gulp/config/definitions.json'),
     del = require('del'),
     gulpif = require('gulp-if'),
     plumber = require('gulp-plumber'),
@@ -162,7 +161,6 @@ for (var compileGroup in definitions) {
 
             var taskName = definitions[compileGroup].group_key + '-' + taskKey;
             var targetFileName = definitions[compileGroup][taskKey].target.name;
-
             if (!targetFileName) {
                 targetFileName = '';
             }
@@ -198,6 +196,10 @@ gulp.task('generate', groupedTasks, function () {
 
                     var sources = definitions[compileGroups[compileGroup]][compileTask].src;
                     var taskKey = definitions[compileGroups[compileGroup]].group_key;
+
+                    if (taskKey === 'LESS') {
+                        sources = definitions[compileGroups[compileGroup]][compileTask].lib;
+                    }
 
                     util.log('Starting ' + util.colors.cyan('"watch"') + ' on ' + util.colors.magenta.bold(taskKey + '-' + compileTask) + ' sources');
                     gulp.watch(sources, [taskKey + '-' + compileTask]);

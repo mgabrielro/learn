@@ -1,22 +1,16 @@
 {
   "compileLESS": {
     "group_key": "LESS",
-    "styles": {
+    "DESKTOP": {
       "src": [
-        "./public/assets/desktop/less/main.less",
-        "./public/assets/desktop/less/**/*.less",
-        "./public/assets/desktop/less/settings/vars.less",
-        "./public/assets/desktop/less/base/*.less",
-        "./public/assets/desktop/less/tools/*.less",
-        "./public/assets/desktop/less/objects/*.less",
-        "./public/assets/desktop/less/components/**/*.less",
-        "./public/assets/desktop/less/components/*.less"
+        "./html/public/assets/desktop/less/main.less"
       ],
       "lib": [
+        "./html/public/assets/desktop/less/**/*.less"
       ],
       "target": {
-        "path": "./public/assets/desktop/dist/css",
-        "name": "app.css"
+        "path": "./html/public/assets/desktop/dist/css",
+        "name": "main.css"
       }
     }
   },
@@ -25,31 +19,22 @@
     "libsJS": {
       "src": [
         "./bower_components/jquery/dist/jquery.min.js",
-        "./bower_components/jquery.popup.overlay/jquery.popupoverlay.js",
-        "./bower_components/spin.js/spin.min.js",
-        "./bower_components/svg4everybody/dist/svg4everybody.min.js",
-        "./public/assets/desktop/js/constants/constants.js",
-        "./public/assets/desktop/js/libs/*.js"
+        "./html/public/assets/desktop/js/namespace.js",
+        "./html/public/assets/desktop/js/libs/*.js"
       ],
       "target": {
-        "path": "./public/assets/desktop/dist/js",
+        "path": "./html/public/assets/desktop/dist/js",
         "name": "libs.js"
       }
     },
     "appJS": {
       "src": [
-        "./public/assets/desktop/js/namespace.js",
-        "./public/assets/desktop/js/domElements/*.js",
-        "./public/assets/desktop/js/formElements/*.js",
-        "!./public/assets/desktop/js/efeedback.js",
-        "!./public/assets/desktop/js/favorite.js",
-        "!./public/assets/desktop/js/functions.js",
-        "./public/assets/desktop/js/svg-icons.js",
-        "./public/assets/desktop/js/tooltip.js",
-        "./public/assets/desktop/js/utils.js"
+        "./html/public/assets/desktop/js/domElements/*.js",
+        "./html/public/assets/desktop/js/formElements/*.js",
+        "./html/public/assets/desktop/js/*.js"
       ],
       "target": {
-        "path": "./public/assets/desktop/dist/js",
+        "path": "./html/public/assets/desktop/dist/js",
         "name": "app.js"
       }
     }
